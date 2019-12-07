@@ -791,7 +791,8 @@
       0.6, "rgb(255,255,200)",
       1, "rgb(255,255,0)"
     ],
-    "heatmap-opacity": 0.8
+    "heatmap-opacity": 0.8,
+    "heatmap-radius": 15
   },
   "layout":{
     "visibility":"none"
