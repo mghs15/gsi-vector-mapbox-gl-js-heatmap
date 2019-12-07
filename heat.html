@@ -69,7 +69,10 @@ body { margin:0; padding:0; }
 <div id='map'></div>
 <div id='mapright'></div>
 
+<!--
 <div id='features'>クリックした地物の情報を表示します。</div>
+-->
+
 
 <div id='menu'>
   <h1 class="titlebox" style="font-size: 100%; margin: 0 0;">
@@ -179,6 +182,7 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].onclick = switchLayer;
 }
 
+/*
 //クリックした地物の情報を表示する。
 map.on('click', function (e) {
 
@@ -207,6 +211,7 @@ map.on('click', function (e) {
   
   document.getElementById('features').innerHTML = outputContent;
 });
+*/
 
 //同期
 map.on('move', function (e) {
