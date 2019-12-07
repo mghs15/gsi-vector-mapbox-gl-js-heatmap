@@ -713,6 +713,9 @@
     ],
     "heatmap-opacity": 0.8
   },
+  "layout":{
+    "visibility":"visible"
+  },
   "id":"heat-symbol"
 },
 {
@@ -742,7 +745,84 @@
     ],
     "heatmap-opacity": 0.8
   },
+  "layout":{
+    "visibility":"visible"
+  },
   "id":"heat-char"
+},
+{
+  "source":"gsibv-vectortile-source-1-4-17",
+  "type": "heatmap",
+  "source-layer":"contour",
+  "minzoom":4,
+  "maxzoom":17,
+  "paint": {
+    "heatmap-color": [
+      "interpolate",
+      ["linear"],
+      ["heatmap-density"],
+      0, "rgba(255,255,255,0)",
+      0.6, "rgb(255,255,200)",
+      1, "rgb(255,255,0)"
+    ],
+    "heatmap-opacity": 0.8
+  },
+  "layout":{
+    "visibility":"none"
+  },
+  "id":"heat-contour"
+},
+{
+  "source":"gsibv-vectortile-source-1-4-17",
+  "type": "heatmap",
+  "source-layer":"building",
+  "filter":[
+    "all",
+    ["==","$type","Polygon"]
+  ],
+  "minzoom":4,
+  "maxzoom":17,
+  "paint": {
+    "heatmap-color": [
+      "interpolate",
+      ["linear"],
+      ["heatmap-density"],
+      0, "rgba(255,255,255,0)",
+      0.6, "rgb(255,255,200)",
+      1, "rgb(255,255,0)"
+    ],
+    "heatmap-opacity": 0.8
+  },
+  "layout":{
+    "visibility":"none"
+  },
+  "id":"heat-building"
+},
+{
+  "source":"gsibv-vectortile-source-1-4-17",
+  "type": "heatmap",
+  "source-layer":"railway",
+  "filter":[
+    "all",
+    ["has","staCode"],
+    ["!=","staCode", "0"]
+  ],
+  "minzoom":4,
+  "maxzoom":17,
+  "paint": {
+    "heatmap-color": [
+      "interpolate",
+      ["linear"],
+      ["heatmap-density"],
+      0, "rgba(0,255,255,0)",
+      1, "rgb(0,255,0)"
+    ],
+    "heatmap-opacity": 0.8
+  },
+  "layout":{
+    "visibility":"none"
+  },
+  "id":"heat-station"
 }
 ],
 "id": "gsi-bv"}
