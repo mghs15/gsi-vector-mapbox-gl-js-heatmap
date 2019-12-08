@@ -128,6 +128,12 @@ map.showTileBoundaries = true;
 map.showCollisionBoxes = false;
 
 //Menu内
+function open_gsivector(){
+  var hash = location.hash;
+  var open_url = "https://maps.gsi.go.jp/vector/" + hash + "/&ls=vstd&disp=1&d=l";
+  window.open(open_url);
+}  
+  
 function switchTileBound(){
   map.showTileBoundaries = !map.showTileBoundaries;
   mapright.showTileBoundaries = !mapright.showTileBoundaries;
